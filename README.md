@@ -10,7 +10,7 @@
 
 ---
 
-힌트
+## 힌트
 - 문자열을 입력 받은 후(scanner의 nextLine() 메소드 활용) 빈 공백 문자열을 기준으로 문자들을 분리해야 한다.
 ```java
 String value = scanner.nextLine();
