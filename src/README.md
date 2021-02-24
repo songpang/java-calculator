@@ -36,7 +36,10 @@ Create a string calculator and write test code for it
 ```console
  연산을 입력해주세요 : 2ㄱㄴ4*4  // error
 ```
-
+#### (6) When the formula ends with an operation symbol
+```console
+ 연산을 입력해주세요 : 2-1*  // error
+```
 ## Structure
 #### 1. Class
 - Calculator class
@@ -55,4 +58,4 @@ Create a string calculator and write test code for it
   - Reset and input when pressing any key value
     
 #### 2. Algorithm
-- DFS
+- DFS, Node
