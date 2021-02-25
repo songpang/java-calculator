@@ -8,11 +8,11 @@ public class Calculator {
     public void calculation(){
         String[] equation_list = getEquation();
         ArithmeticExpressionStack arithmeticExpressionStack = new ArithmeticExpressionStack(equation_list, equation_list.length);
-        OperatorSetting(arithmeticExpressionStack, equation_list.length);
+        OperatorSetting(arithmeticExpressionStack);
 
     }
 
-    public void OperatorSetting(ArithmeticExpressionStack arithmeticExpressionStack, int equationLength) {
+    public void OperatorSetting(ArithmeticExpressionStack arithmeticExpressionStack) {
         ErrorException exception = new ErrorException();
         String firstString = arithmeticExpressionStack.pop();
         int firstNumber = exception.NumericalError(firstString);
