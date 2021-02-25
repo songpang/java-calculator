@@ -14,4 +14,8 @@ public class ErrorException {
         }
         return numberConverted;
     }
+
+    public void OperatorError(){
+
+    }
 }

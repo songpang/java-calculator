@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 
 public class Calculator {
+    Message message = new Message();
     public void calculation(){
         String[] equation_list = getEquation();
         ArithmeticExpressionStack arithmeticExpressionStack = new ArithmeticExpressionStack(equation_list, equation_list.length);
@@ -22,8 +23,7 @@ public class Calculator {
             int secondNumber = exception.NumericalError(secondString);
             firstNumber = chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
         }
-        arithmeticExpressionStack.clear();
-        System.out.println("결과");
+        System.out.print("결과 : ");
         System.out.println(firstNumber);
         init();
     }
@@ -45,6 +45,9 @@ public class Calculator {
         }
         if (operator.equals(divideOperation.operationName())){
             result = divideOperation.calculation(firstNumber, SecondNumber);
+        }
+        else{
+            message.exceptionResult("NOT_OPERATOR");
         }
 
         return result;
