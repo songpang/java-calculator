@@ -13,12 +13,13 @@ public class DivideOperation implements OperationInterface {
 
     @Override
     public int calculation(int beforeNumber, int afterNumber) {
+        Message message = new Message();
         try{
             int Result = beforeNumber / afterNumber;
             return Result;
         }
         catch (ArithmeticException e){
-            System.out.println("0으로 나눌수가 없습니다.");
+            message.exceptionResult("INVALID_DIVIDE");
         }
         return 0;
     }
