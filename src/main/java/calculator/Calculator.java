@@ -23,8 +23,10 @@ public class Calculator {
             int secondNumber = exception.NumericalError(secondString);
             firstNumber = chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
         }
-        System.out.print("결과 : ");
-        System.out.println(firstNumber);
+
+        if(firstNumber != 0){
+            message.calculationResult(firstNumber);
+        }
         init();
     }
 
@@ -37,13 +39,13 @@ public class Calculator {
         if (operator.equals(addOperation.operationName())){
             result = addOperation.calculation(firstNumber, SecondNumber);
         }
-        if (operator.equals(subOperation.operationName())){
+        else if (operator.equals(subOperation.operationName())){
             result = subOperation.calculation(firstNumber, SecondNumber);
         }
-        if (operator.equals(multiplyOperation.operationName())){
+        else if (operator.equals(multiplyOperation.operationName())){
             result = multiplyOperation.calculation(firstNumber, SecondNumber);
         }
-        if (operator.equals(divideOperation.operationName())){
+        else if (operator.equals(divideOperation.operationName())){
             result = divideOperation.calculation(firstNumber, SecondNumber);
         }
         else{
@@ -55,7 +57,7 @@ public class Calculator {
 
     public void init(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("계산을 계속 진행하시려면 1, 멈추시려면 2를 눌러주세요");
+        System.out.println("계산을 계속 진행하시려면 1, 멈추시려면 임의의 다른키를 눌러주세요");
         String value = scanner.nextLine();
 
         if(value.equals("1")){
