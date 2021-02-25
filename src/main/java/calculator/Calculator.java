@@ -30,7 +30,7 @@ public class Calculator {
         init();
     }
 
-    private int chooseOperatorAndCalculate(int firstNumber, String operator, int SecondNumber){
+    public int chooseOperatorAndCalculate(int firstNumber, String operator, int SecondNumber){
         AddOperation addOperation = new AddOperation();
         SubOperation subOperation = new SubOperation();
         MultiplyOperation multiplyOperation = new MultiplyOperation();
