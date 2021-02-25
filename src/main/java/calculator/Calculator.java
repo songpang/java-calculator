@@ -13,19 +13,19 @@ public class Calculator {
     }
 
     public void OperatorSetting(ArithmeticExpressionStack arithmeticExpressionStack) {
-        ErrorException exception = new ErrorException();
+        ErrorException exceptionCheck = new ErrorException();
         String firstString = arithmeticExpressionStack.pop();
-        int firstNumber = exception.NumericalError(firstString);
+        int cumulativeResult = exceptionCheck.NumericalError(firstString);
 
         for(int i = 0; i<(arithmeticExpressionStack.getStackSize())/2;i++){
             String operator = arithmeticExpressionStack.pop();
             String secondString = arithmeticExpressionStack.pop();
-            int secondNumber = exception.NumericalError(secondString);
-            firstNumber = chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
+            int secondNumber = exceptionCheck.NumericalError(secondString);
+            cumulativeResult = chooseOperatorAndCalculate(cumulativeResult, operator, secondNumber);
         }
 
-        if(firstNumber != 0){
-            message.calculationResult(firstNumber);
+        if(cumulativeResult != 0){
+            message.calculationResult(cumulativeResult);
         }
         init();
     }
