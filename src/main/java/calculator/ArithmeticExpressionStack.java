@@ -21,7 +21,7 @@ public class ArithmeticExpressionStack implements Stack {
 
     public String pop(){
         if(isEmpty()){
-            return "없는데?";
+            return "스택이 존재하지 않습니다.";
         }
         else{
             return stack[flag++];
