@@ -25,6 +25,7 @@ public class Calculator {
         arithmeticExpressionStack.clear();
         System.out.println("결과");
         System.out.println(firstNumber);
+        init();
     }
 
     private int chooseOperatorAndCalculate(int firstNumber, String operator, int SecondNumber){
@@ -49,6 +50,18 @@ public class Calculator {
         return result;
     }
 
+    public void init(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("계산을 계속 진행하시려면 1, 멈추시려면 2를 눌러주세요");
+        String value = scanner.nextLine();
+
+        if(value.equals("1")){
+            calculation();
+        }
+        else{
+            System.exit(0);
+        }
+    }
 
     public String[] getEquation(){
         Scanner scanner = new Scanner(System.in);

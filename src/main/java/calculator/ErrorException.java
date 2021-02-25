@@ -10,7 +10,7 @@ public class ErrorException {
         } catch (NumberFormatException e) {
             System.out.println("잘못된 연산기호 입니다.");
             Calculator calculator = new Calculator();
-            calculator.calculation();
+            calculator.init();
         }
         return numberConverted;
     }
