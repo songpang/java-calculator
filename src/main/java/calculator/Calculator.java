@@ -45,10 +45,10 @@ public class Calculator {
         else if (operator.equals(multiplyOperation.operationName())){
             result = multiplyOperation.calculation(firstNumber, SecondNumber);
         }
-        else if (operator.equals(divideOperation.operationName())){
+        else if (operator.equals(divideOperation.operationName())) {
             result = divideOperation.calculation(firstNumber, SecondNumber);
         }
-        else{
+        else {
             message.exceptionResult("NOT_OPERATOR");
         }
 
