@@ -2,6 +2,7 @@ package calculator;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,8 +15,6 @@ class CalculatorTest {
 
     @Test
     void calculation() {
-//        Calculator calculator = new Calculator();
-//        calculator.calculation();
     }
 
     @Test
@@ -66,4 +65,19 @@ class CalculatorTest {
         assertEquals(3, result);
     }
 
+    @Test
+    void invalidCalculation(){
+        // todo refactoring
+        assertThrows(NumberFormatException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Calculator calculator = new Calculator();
+
+                String[] equation_list = {"+", "1", "+"};
+                ArithmeticExpressionStack arithmeticExpressionStack = new ArithmeticExpressionStack(equation_list, equation_list.length);
+
+                calculator.OperatorSetting(arithmeticExpressionStack);
+            }
+        });
+    }
 }
