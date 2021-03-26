@@ -1,6 +1,6 @@
 package calculator;
 
-public class SubOperation implements OperationInterface {
+public class SubOperation implements Operation {
 
     @Override
     public String operationName() {

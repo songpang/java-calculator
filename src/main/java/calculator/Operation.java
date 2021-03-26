@@ -1,6 +1,6 @@
 package calculator;
 
-interface OperationInterface {
+interface Operation {
     String operationName();
 
     int calculation(int beforeNumber, int afterNumber);

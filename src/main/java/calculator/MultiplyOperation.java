@@ -1,6 +1,6 @@
 package calculator;
 
-public class MultiplyOperation implements OperationInterface {
+public class MultiplyOperation implements Operation {
     @Override
     public String operationName() {
         return "*";

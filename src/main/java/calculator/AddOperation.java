@@ -1,6 +1,6 @@
 package calculator;
 
-public class AddOperation implements OperationInterface {
+public class AddOperation implements Operation {
     @Override
     public String operationName() {
         return "+";

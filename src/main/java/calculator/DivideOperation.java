@@ -1,6 +1,6 @@
 package calculator;
 
-public class DivideOperation implements OperationInterface {
+public class DivideOperation implements Operation {
     @Override
     public String operationName() {
         return "/";
