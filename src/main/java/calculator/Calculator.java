@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 public class Calculator {
-    Message message = new Message();
+    private Message message = new Message();
 
     /**
      * calculation method
