@@ -7,10 +7,10 @@ import org.junit.jupiter.api.function.Executable;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
-
+    Calculator calculator;
     @BeforeEach
     void setUp() {
-        Calculator calculator = new Calculator();
+        calculator = new Calculator();
     }
 
     @Test
@@ -23,7 +23,6 @@ class CalculatorTest {
 
     @Test
     void addChooseOperatorAndCalculate(){
-        Calculator calculator = new Calculator();
         int firstNumber = 2;
         String operator = "+";
         int secondNumber = 3;
@@ -34,7 +33,6 @@ class CalculatorTest {
 
     @Test
     void subChooseOperatorAndCalculate(){
-        Calculator calculator = new Calculator();
         int firstNumber = 2;
         String operator = "-";
         int secondNumber = 3;
@@ -45,7 +43,6 @@ class CalculatorTest {
 
     @Test
     void multiplyChooseOperatorAndCalculate(){
-        Calculator calculator = new Calculator();
         int firstNumber = 2;
         String operator = "*";
         int secondNumber = 3;
@@ -56,7 +53,6 @@ class CalculatorTest {
 
     @Test
     void divideChooseOperatorAndCalculate(){
-        Calculator calculator = new Calculator();
         int firstNumber = 9;
         String operator = "/";
         int secondNumber = 3;
@@ -67,11 +63,9 @@ class CalculatorTest {
 
     @Test
     void invalidCalculation(){
-        // todo refactoring
         assertThrows(NumberFormatException.class, new Executable() {
             @Override
             public void execute() throws Throwable {
-                Calculator calculator = new Calculator();
 
                 String[] equation_list = {"+", "1", "+"};
                 ArithmeticExpressionStack arithmeticExpressionStack = new ArithmeticExpressionStack(equation_list, equation_list.length);
