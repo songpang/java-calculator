@@ -1,64 +1,57 @@
 package calculator;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.jupiter.api.function.Executable;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
     Calculator calculator;
+    int firstNumber;
+    int secondNumber;
+    String operator;
+
     @BeforeEach
     void setUp() {
         calculator = new Calculator();
-    }
-
-    @Test
-    void calculation() {
-    }
-
-    @Test
-    void operatorSetting() {
+        firstNumber = 2;
+        secondNumber = 3;
     }
 
     @Test
     void addChooseOperatorAndCalculate(){
-        int firstNumber = 2;
-        String operator = "+";
-        int secondNumber = 3;
+        operator = "+";
         int result = 0;
         result = calculator.chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
         assertEquals(5, result);
+        assertThat(5).isEqualTo(result);
     }
 
     @Test
     void subChooseOperatorAndCalculate(){
-        int firstNumber = 2;
-        String operator = "-";
-        int secondNumber = 3;
+        operator = "-";
         int result = 0;
         result = calculator.chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
-        assertEquals(-1, result);
+        assertThat(-1).isEqualTo(result);
     }
 
     @Test
     void multiplyChooseOperatorAndCalculate(){
-        int firstNumber = 2;
-        String operator = "*";
-        int secondNumber = 3;
+        operator = "*";
         int result = 0;
         result = calculator.chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
-        assertEquals(6, result);
+        assertThat(6).isEqualTo(result);
     }
 
     @Test
     void divideChooseOperatorAndCalculate(){
-        int firstNumber = 9;
-        String operator = "/";
-        int secondNumber = 3;
+        operator = "/";
         int result = 0;
         result = calculator.chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
-        assertEquals(3, result);
+        assertThat(3).isEqualTo(result);
     }
 
     @Test
