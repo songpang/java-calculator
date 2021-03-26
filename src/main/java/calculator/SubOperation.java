@@ -1,10 +1,6 @@
 package calculator;
 
 public class SubOperation implements OperationInterface {
-    @Override
-    public int operationPriority() {
-        return 1;
-    }
 
     @Override
     public String operationName() {

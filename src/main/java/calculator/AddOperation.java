@@ -2,11 +2,6 @@ package calculator;
 
 public class AddOperation implements OperationInterface {
     @Override
-    public int operationPriority() {
-        return 1;
-    }
-
-    @Override
     public String operationName() {
         return "+";
     }

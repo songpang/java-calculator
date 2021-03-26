@@ -122,7 +122,7 @@ public class Calculator {
      *
      * return type : void
      */
-    public String[] getEquation(){
+    String[] getEquation(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("수식을 입력해주세요 : ");
         String value = scanner.nextLine();
