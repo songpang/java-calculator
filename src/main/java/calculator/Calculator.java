@@ -32,7 +32,6 @@ public class Calculator {
     public void OperatorSetting(ArithmeticExpressionStack arithmeticExpressionStack) {
         ErrorException exceptionCheck = new ErrorException();
         String firstString = arithmeticExpressionStack.pop();
-
         // Error checking when converting string to int
         int cumulativeResult = exceptionCheck.NumericalError(firstString);
 

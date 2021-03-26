@@ -1,7 +1,5 @@
 package calculator;
 
-import java.util.InputMismatchException;
-
 public class ErrorException {
     Message message = new Message();
 

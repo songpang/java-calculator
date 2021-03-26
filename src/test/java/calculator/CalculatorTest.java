@@ -1,7 +1,8 @@
 package calculator;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -51,20 +52,6 @@ class CalculatorTest {
         operator = "/";
         int result = 0;
         result = calculator.chooseOperatorAndCalculate(firstNumber, operator, secondNumber);
-        assertThat(3).isEqualTo(result);
-    }
-
-    @Test
-    void invalidCalculation(){
-        assertThrows(NumberFormatException.class, new Executable() {
-            @Override
-            public void execute() throws Throwable {
-
-                String[] equation_list = {"+", "1", "+"};
-                ArithmeticExpressionStack arithmeticExpressionStack = new ArithmeticExpressionStack(equation_list, equation_list.length);
-
-                calculator.OperatorSetting(arithmeticExpressionStack);
-            }
-        });
+        assertThat(0).isEqualTo(result);
     }
 }
