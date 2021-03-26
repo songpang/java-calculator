@@ -90,7 +90,12 @@ public class Calculator {
 
         // Raise error when a symbol that does not correspond to the arithmetic operations(+, -, *, /) comes
         else{
-            message.exceptionResult("NOT_OPERATOR");
+            try {
+                throw new Exception();
+            } catch (Exception e) {
+                e.getMessage();
+                message.exceptionResult("NOT_OPERATOR");
+            }
         }
 
         return result;
