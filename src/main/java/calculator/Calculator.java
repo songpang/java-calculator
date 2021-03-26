@@ -122,11 +122,18 @@ public class Calculator {
      *
      * return type : void
      */
-    String[] getEquation(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("수식을 입력해주세요 : ");
-        String value = scanner.nextLine();
+    String[] getEquation() {
+        String value = inputValues();
         String[] values = value.split(" ");
         return values;
     }
+
+    private String inputValues() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("수식을 입력해주세요 : ");
+        String value = scanner.nextLine();
+        return value;
+    }
+
+
 }

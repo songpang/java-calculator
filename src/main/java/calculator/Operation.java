@@ -1,9 +1,9 @@
 package calculator;
 
 interface OperationInterface {
-    public String operationName();
+    String operationName();
 
-    public int calculation(int beforeNumber, int afterNumber);
+    int calculation(int beforeNumber, int afterNumber);
 }
 
 
